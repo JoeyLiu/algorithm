@@ -11,7 +11,7 @@ package algorithm;
  *
  * @author damaomao
  */
-public class Bots {
+public class algorithm {
 
     /**
      * @param args the command line arguments
