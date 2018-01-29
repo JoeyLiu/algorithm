@@ -5,6 +5,8 @@
  */
 package algorithm;
 
+import static algorithm.quicksort.quicksort;
+
 
 
 /**
@@ -18,42 +20,26 @@ public class algorithm {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int[] a = new int[]{8,7,1,4,9,5,2,3,6,11,15,10,8,12};
-        quick(0,(a.length-1), a);
-        for(int b: a){
-            System.out.println(b);
-        }
         
+        int[] a = randomInt.get();
+//          int[] a = new int[]{34,17,7,13,22,74,9,85,17,85,6,50,56,87,65,66,42,28};
+//                  for(int b: a){
+//            System.out.print(b + ",");
+//        }
+//        System.out.println("");
+        quicksort(a);
+       // simpleSelection.sort(a);
+        System.out.println(check_minmum(a));
     }
-             static void quick(int left, int right, int[] array){
-             if(left >= right) {
-                 
-                 return;
-             }
-             
-             int key = array[left];
-             int low = left;
-             int high = right;
-             int temp;
-             
-             while(low < high){
-             while(low < high && array[high] >= key) high--;
-             if(low < high){
-             temp = array[low];
-             array[low] = array[high];
-             array[high] = temp;
-            } 
-                           
-             while(low < high && array[low] <= key) low++;
-              if(low < high){
-             temp = array[high];
-             array[high] = array[low];
-             array[low] = temp;
-             } 
-             }
-             
-             System.out.println(";" + left + "," + low);
-             quick(left, low-1, array);
-             quick(low+1, right, array);
-         }
+    private static boolean check_minmum(int[] a){
+        boolean min = true;
+        for(int i=0;i<a.length-1;i++){
+            if(a[i] > a[i+1]) {
+                return false;
+                
+            }
+        }
+        return true;
+    }
+    
 }
