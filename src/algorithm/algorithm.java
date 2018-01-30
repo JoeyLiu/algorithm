@@ -23,7 +23,7 @@ public class algorithm {
         try{
             for(int i=0;i<100;i++){
                 int[] a = randomInt.get();
-                merge.sort(a);
+                //merge.sort(a);
                  //swap.QuickSort(a);
                  // simpleSelection.sort(a);
                 //bubblesort.sort(a);
