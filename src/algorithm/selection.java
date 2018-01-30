@@ -12,7 +12,6 @@ package algorithm;
 public class selection {
     public static void simpleSelectionSort(int[] a){
         int length = a.length;
-        int minimum;
         int min_index = 0;
         for(int i=0;i<length;i++){
            // minimum = a[i];

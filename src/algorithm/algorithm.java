@@ -23,7 +23,8 @@ public class algorithm {
         try{
             for(int i=0;i<100;i++){
                 int[] a = randomInt.get();
-                 swap.QuickSort(a);
+                merge.sort(a);
+                 //swap.QuickSort(a);
                  // simpleSelection.sort(a);
                 //bubblesort.sort(a);
                 //insertSort.sort(a);
@@ -35,6 +36,7 @@ public class algorithm {
         catch (Exception e){
            e.printStackTrace();
        }        
+        
     }
     private static boolean check_sort(int[] a){
         
