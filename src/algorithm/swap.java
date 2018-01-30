@@ -9,15 +9,15 @@ package algorithm;
  *
  * @author damaomao
  */
-public class quicksort {
-    public static void quicksort(int[] a){
+public class swap {
+    public static void QuickSort(int[] a){
         quick(0,(a.length-1), a);
         for(int b: a){
             System.out.print(b + ",");
         }
         System.out.println("");
     }
-             static void quick(int left, int right, int[] array){
+    private static void quick(int left, int right, int[] array){
              if(left >= right) {              
                  return;
              }
@@ -47,4 +47,21 @@ public class quicksort {
              quick(left, low-1, array);
              quick(low+1, right, array);
          }
+        public static void BubbleSort(int[] a){
+        int length = a.length;
+       
+        for(int i=length-1;i>0;i--){
+            for(int j=0;j<i;j++){
+                if(a[j]>a[j+1]){
+                    int temp = a[j+1];
+                    a[j+1] = a[j];
+                    a[j] = temp;
+                }
+            }
+        }
+        for(int b: a){
+            System.out.print(b + ",");
+        }
+        System.out.println("");
+    }
 }

@@ -5,7 +5,7 @@
  */
 package algorithm;
 
-import static algorithm.quicksort.quicksort;
+
 
 
 
@@ -23,7 +23,7 @@ public class algorithm {
         try{
             for(int i=0;i<100;i++){
                 int[] a = randomInt.get();
-                 quicksort(a);
+                 swap.QuickSort(a);
                  // simpleSelection.sort(a);
                 //bubblesort.sort(a);
                 //insertSort.sort(a);
@@ -37,7 +37,7 @@ public class algorithm {
        }        
     }
     private static boolean check_sort(int[] a){
-        boolean min = true;
+        
         for(int i=0;i<a.length-1;i++){
             if(a[i] > a[i+1]) {
                 return false;              

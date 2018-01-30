@@ -9,8 +9,8 @@ package algorithm;
  *
  * @author damaomao
  */
-public class simpleSelection {
-    public static void sort(int[] a){
+public class selection {
+    public static void simpleSelectionSort(int[] a){
         int length = a.length;
         int minimum;
         int min_index = 0;
@@ -31,5 +31,8 @@ public class simpleSelection {
             System.out.print(b + ",");
         }
         System.out.println("");
+    }
+    public static void HeapSort(int[] a){
+        
     }
 }

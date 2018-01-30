@@ -9,8 +9,8 @@ package algorithm;
  *
  * @author damaomao
  */
-public class insertSort {
-    public static void sort(int[] a){
+public class insert {
+    public static void StraightInsertSort(int[] a){
         int len = a.length;
         for(int i=1;i<len;i++){
             int ins = a[i];
@@ -25,5 +25,8 @@ public class insertSort {
             System.out.print(b + ",");
         }
         System.out.println("");
+    }
+    public static void Shell(int[] a){
+        
     }
 }
