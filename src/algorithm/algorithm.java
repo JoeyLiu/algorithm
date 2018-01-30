@@ -20,23 +20,27 @@ public class algorithm {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        int[] a = randomInt.get();
-//          int[] a = new int[]{34,17,7,13,22,74,9,85,17,85,6,50,56,87,65,66,42,28};
-//                  for(int b: a){
-//            System.out.print(b + ",");
-//        }
-//        System.out.println("");
-        quicksort(a);
-       // simpleSelection.sort(a);
-        System.out.println(check_minmum(a));
+        try{
+            for(int i=0;i<100;i++){
+                int[] a = randomInt.get();
+                 quicksort(a);
+                 // simpleSelection.sort(a);
+                //bubblesort.sort(a);
+                //insertSort.sort(a);
+                if(!check_sort(a)){
+                    throw new Exception("a false occurs");
+                }
+            }
+        }
+        catch (Exception e){
+           e.printStackTrace();
+       }        
     }
-    private static boolean check_minmum(int[] a){
+    private static boolean check_sort(int[] a){
         boolean min = true;
         for(int i=0;i<a.length-1;i++){
             if(a[i] > a[i+1]) {
-                return false;
-                
+                return false;              
             }
         }
         return true;

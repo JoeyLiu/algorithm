@@ -25,22 +25,22 @@ public class quicksort {
              int key = array[left];
              int low = left;
              int high = right;
-             int temp;
+             
              
              while(low < high){
              while(low < high && array[high] >= key) high--;
-             if(low < high){
-             temp = array[low];
+            
+             int temp = array[low];
              array[low] = array[high];
              array[high] = temp;
-            } 
+            
                            
              while(low < high && array[low] <= key) low++;
-              if(low < high){
+              
              temp = array[high];
              array[high] = array[low];
              array[low] = temp;
-             } 
+             
              }
              
              

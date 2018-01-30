@@ -7,19 +7,20 @@ package algorithm;
 
 /**
  *
- * @author damaomao
+ * @author yueliliu
  */
-public class insertSort {
+public class bubblesort {
     public static void sort(int[] a){
-        int len = a.length;
-        for(int i=1;i<len;i++){
-            int ins = a[i];
-            int j=i-1;
-            while(j>=0 && a[j] > ins){
-                a[j+1] = a[j];
-                j--;
+        int length = a.length;
+       
+        for(int i=length-1;i>0;i--){
+            for(int j=0;j<i;j++){
+                if(a[j]>a[j+1]){
+                    int temp = a[j+1];
+                    a[j+1] = a[j];
+                    a[j] = temp;
+                }
             }
-            a[j+1] = ins;
         }
         for(int b: a){
             System.out.print(b + ",");
