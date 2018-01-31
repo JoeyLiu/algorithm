@@ -12,10 +12,10 @@ package sorting;
 public class swap {
     public static void QuickSort(int[] a){
         quick(0,(a.length-1), a);
-        for(int b: a){
-            System.out.print(b + ",");
-        }
-        System.out.println("");
+//        for(int b: a){
+//            System.out.print(b + ",");
+//        }
+//        System.out.println("");
     }
     private static void quick(int left, int right, int[] array){
              if(left >= right) {              

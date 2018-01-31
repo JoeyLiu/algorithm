@@ -19,10 +19,10 @@ public class randomInt {
             //System.out.println(num);
             random[i] = num;
         }
-        for(int b: random){
-            System.out.print(b + ",");
-        }
-        System.out.println("");
+//        for(int b: random){
+//            System.out.print(b + ",");
+//        }
+//        System.out.println("");
         return random;
     }
 }
