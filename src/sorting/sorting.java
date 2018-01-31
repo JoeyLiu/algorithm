@@ -3,17 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithm;
-
-
-
-
+package sorting;
 
 /**
  *
  * @author damaomao
  */
-public class algorithm {
+public class sorting {
 
     /**
      * @param args the command line arguments
