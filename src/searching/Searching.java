@@ -13,10 +13,10 @@ import sorting.randomInt;
  */
 public class Searching {
     public static void main(String[] args) {
-//        int[] a = new int[]{5,7,7,12,15,20,21,21,22,23,26,28,29,30,31,34,40,41,42,44,45,48,48,50,53,69,70,73,78,79,80,84,87,88,91,95};
-//       int target = 5;
-//       System.out.println(BinarySearch.search(a, target));
-        run();
+        int[] a = new int[]{5,7,7,12,15,20,21,21,22,23,26,28,29,30,31,34,40,41,42,44,45,48,48,50,53,69,70,73,78,79,80,84,87,88,91,95};
+       int target = 95;
+       System.out.println(InsertSearch.search(a, target));
+        //run();
         
         
         

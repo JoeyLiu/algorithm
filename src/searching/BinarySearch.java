@@ -20,18 +20,10 @@ public class BinarySearch {
         
         while(first <= last){
             int mid = (last+first)/2;
-            if (target == a[mid]){
-                return mid;
-            }
-            if(target > a[mid]){                
-                first = mid+1;      
-            }
-            else{
-                last = mid-1;
-            }
+            if(target == a[mid]) return mid;
+            if(target > a[mid]) first = mid+1; 
+            if(target < a[mid]) last = mid-1;          
         }
-        
- 
         return -1;
     }
 }
