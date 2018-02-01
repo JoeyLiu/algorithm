@@ -26,10 +26,10 @@ public class selection {
             a[i] = a[min_index];
             a[min_index] = temp;
         }
-        for(int b: a){
-            System.out.print(b + ",");
-        }
-        System.out.println("");
+//        for(int b: a){
+//            System.out.print(b + ",");
+//        }
+//        System.out.println("");
     }
     public static void HeapSort(int[] a){
         

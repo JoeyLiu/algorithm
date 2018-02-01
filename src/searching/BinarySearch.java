@@ -11,7 +11,7 @@ package searching;
  */
 public class BinarySearch {
     public static int search(int a[], int target){
-        
+       // sorting.swap.QuickSort(a);
         int len = a.length;
         if(len == 0) return -1;
         

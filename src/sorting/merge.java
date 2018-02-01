@@ -13,10 +13,10 @@ public class merge {
     public static void sort(int[] a){
         int[] temp = new int[a.length];
         MergeSort(a, 0, a.length-1);
-        for(int b: a){
-            System.out.print(b + ",");
-        }
-        System.out.println("");
+//        for(int b: a){
+//            System.out.print(b + ",");
+//        }
+//        System.out.println("");
     }
     private static void MergeSort(int[] a, int first, int last){
         if(first < last){

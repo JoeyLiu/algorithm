@@ -11,7 +11,7 @@ package sorting;
  */
 public class randomInt {
     public static int[] get(){
-        int count = (int) (Math.random() * 100);
+        int count = 100000;
         int[] random = new int[count];
         for(int i=0;i<random.length;i++){
             int num = (int) (Math.random() * 100);

@@ -21,10 +21,10 @@ public class insert {
             }
             a[j+1] = ins;
         }
-        for(int b: a){
-            System.out.print(b + ",");
-        }
-        System.out.println("");
+//        for(int b: a){
+//            System.out.print(b + ",");
+//        }
+//        System.out.println("");
     }
     public static void Shell(int[] a){
         

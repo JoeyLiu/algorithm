@@ -11,13 +11,22 @@ package searching;
  */
 public class InsertSearch {
     public static int search(int[] a, int target){
+        //sorting.swap.QuickSort(a);
         int len = a.length;
         int low = 0;
         int high = len-1;
         int mid = 0;
+        
+        if(len == 0) return -1;
         while(low <= high){
-            if( low == high) mid = low;
-            if( low != high )mid = low + (target-a[low])/(a[high] - a[low])*(high-low)/2;
+            if(target < a[low] || target > a[high]) return -1;
+            if( low == high || a[low] == a[high]) {
+                mid = low;
+            }
+            else{
+                mid = low + (target-a[low])/(a[high] - a[low])*(high-low)/2;
+            }
+            //if( low != high && a[low] != a[high]) 
             if( target == a[mid]) return mid;
             if( target > a[mid]) low++;
             if( target < a[mid]) high--;
