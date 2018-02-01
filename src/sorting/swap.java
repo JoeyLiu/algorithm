@@ -43,7 +43,6 @@ public class swap {
              
              }
              
-             
              quick(left, low-1, array);
              quick(low+1, right, array);
          }

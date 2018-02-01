@@ -10,15 +10,15 @@ package searching;
  * @author yueliliu
  */
 public class SequenceSearch {
-    public static boolean search(int[] a, int target){
+    public static int search(int[] a, int target){
         int len = a.length;
         //boolean bingo = false;
         for(int i=0;i<len;i++){
             if(a[i] == target){
-                return true;
+                return i;
             }
         }
-        return false;
+        return -1;
     }
     
 }

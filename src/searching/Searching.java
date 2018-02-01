@@ -20,29 +20,22 @@ public class Searching {
         int target;
         for(int i=0;i<100;i++){
             int[] a = randomInt.get();
+            sorting.swap.QuickSort(a);
                 for(int j=0;j<101;j++){
                     target = j;
+                    int seq = SequenceSearch.search(a, target);
+                    int bin = BinarySearch.search(a, target);
                     try{
-                        if(SequenceSearch.search(a, target) && BinarySearch.search(a, target)){
-                        //System.out.println("Find it!");
+                        if( seq == bin ){
+                      // System.out.printf("Seq: %d is equal to Bin: %d\n",seq, bin);
                         }
-                        else if(!SequenceSearch.search(a, target) && !BinarySearch.search(a, target)){
-                       // System.out.println("N/A");
-                        }
-                        else if(!SequenceSearch.search(a, target) && BinarySearch.search(a, target)){
-                                    System.out.print(target + "-1: ");
+                        else{
+                            System.out.printf("Target is %d, Seq: %d is not equal to Bin: %d\n",target, seq, bin);
                                     for(int b: a){
                                         System.out.print(b + ",");
                                     }
                                     System.out.println("");
-                            //throw new Exception("a false occurs");
-                        }else if(SequenceSearch.search(a, target) && !BinarySearch.search(a, target)){
-                            System.out.print(target + "-2: ");
-                                    for(int b: a){
-                                        System.out.print(b + ",");
-                                    }
-                                    System.out.println("");
-                            //throw new Exception("a false occurs");
+                            
                         }
                     }
                     catch (Exception e){

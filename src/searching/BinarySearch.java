@@ -10,38 +10,28 @@ package searching;
  * @author yueliliu
  */
 public class BinarySearch {
-    public static boolean search(int a[], int target){
-        sorting.swap.QuickSort(a);
+    public static int search(int a[], int target){
+        
         int len = a.length;
-        if(len == 0) return false;
-        if(len == 1 && target == a[0]){
-            return true;
-        }
-        if (target == a[0] || target == a[len-1]){
-                return true;
-            }
+        if(len == 0) return -1;
+        
         int first = 0;
-        int last  = len;
-        int mid = (last+first)%2 == 0?(last+first)/2:(last+first)/2+1;
-        while((last-first) > 1){
-            if (target == a[mid-1]){
-                return true;
+        int last  = len-1;
+        
+        while(first <= last){
+            int mid = (last+first)/2;
+            if (target == a[mid]){
+                return mid;
             }
-            if(target > a[mid-1]){
-                
-                first = mid;
-                
-                mid = (last+mid)%2 == 0?(last+mid)/2:(last+mid)/2+1;
-                
+            if(target > a[mid]){                
+                first = mid+1;      
             }
             else{
-                last = mid;
-                
-                mid = (first+mid)%2 == 0?(first+mid)/2:(first+mid)/2+1;
+                last = mid-1;
             }
         }
         
  
-        return false;
+        return -1;
     }
 }
