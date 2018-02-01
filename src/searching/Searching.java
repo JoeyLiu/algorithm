@@ -16,27 +16,31 @@ public class Searching {
 //        int[] a = new int[]{5,7,7,12,15,20,21,21,22,23,26,28,29,30,31,34,40,41,42,44,45,48,48,50,53,69,70,73,78,79,80,84,87,88,91,95};
 //       int target = 5;
 //       System.out.println(BinarySearch.search(a, target));
+        run();
         
-        int target;
+        
+        
+    }
+    private static void run(){
         for(int i=0;i<100;i++){
             int[] a = randomInt.get();
             sorting.swap.QuickSort(a);
                 for(int j=0;j<101;j++){
-                    target = j;
+                    int target = j;
                     int seq = SequenceSearch.search(a, target);
                     int bin = BinarySearch.search(a, target);
+                    int hash = HashSearch.search(a, target);
+
                     try{
-                        if( seq == bin ){
-                      // System.out.printf("Seq: %d is equal to Bin: %d\n",seq, bin);
+                        if( seq == -1 ){
+                             if(bin != -1 || hash != -1){
+                                 throw new Exception("Binary: " + bin + "Hash: " + hash);
+                             }
                         }
                         else{
-                            System.out.printf("Target is %d, Seq: %d is not equal to Bin: %d\n",target, seq, bin);
-                                    for(int b: a){
-                                        System.out.print(b + ",");
-                                    }
-                                    System.out.println("");
-                            
+                            System.out.printf("Target is: %d Hash is: %d Seq is: %d Binary is: %d\n", target, hash, seq, bin);
                         }
+                        
                     }
                     catch (Exception e){
                         e.printStackTrace();
@@ -44,9 +48,6 @@ public class Searching {
                 }
                
         }
-        
-        
-        
     }
     
 }
